@@ -1,3 +1,9 @@
+import Login from "@/components/Login/Login";
+
 export default function LoginPage() {
-  return <h1>Hello, Home page!</h1>;
+  return (
+    <div>
+      <Login />
+    </div>
+  );
 }
