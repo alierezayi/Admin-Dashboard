@@ -14,6 +14,8 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { useSession, signOut, signIn } from "next-auth/react";
 import AdbIcon from "@mui/icons-material/Adb";
+import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
+import { useMediaQuery } from "@mui/material";
 
 const pages = ["Products", "Pricing", "Blog"];
 
@@ -42,6 +44,8 @@ function Header() {
     setAnchorElUser(null);
   };
 
+  const tabletCheck = useMediaQuery("(min-width: 768px)");
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -62,7 +66,7 @@ function Header() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            DataSoft
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -132,9 +136,13 @@ function Header() {
             ))}
           </Box>
 
-          <Box sx={{marginRight: 4}}>
-            <Typography>{session?.user?.email}</Typography>
-          </Box>
+          {tabletCheck && (
+            <Box sx={{ marginRight: 4 }}>
+              <Typography>{session?.user?.email}</Typography>
+            </Box>
+          )}
+
+          <ThemeToggleButton />
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open profile" sx={{ p: 4 }}>
