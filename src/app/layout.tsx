@@ -8,6 +8,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/utils/authOptions";
 import { CssBaseline } from "@mui/material";
 import ThemeRegistry from "../providers/ThemeProvider";
+import LayoutProvider from "@/providers/LayoutProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,10 +28,10 @@ export default async function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NextAuthProvider>
-          <ThemeRegistry options={{ key: "mui" }}>
-            <Header />
-            {session && <SideMenu />}
-            {children}
+          <ThemeRegistry>
+            <LayoutProvider>
+              {children}
+            </LayoutProvider>
           </ThemeRegistry>
         </NextAuthProvider>
       </body>
