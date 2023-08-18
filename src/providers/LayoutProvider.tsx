@@ -24,7 +24,7 @@ const LayoutProvider = (props: any) => {
           <Typography variant="h4">Loading . . .</Typography>
         </Box>
       ) : (
-        <Box sx={{ padding: "0 24px 0 80px" }}>
+        <Box sx={{ padding: session ? "25px 24px 0 80px" : 0 }}>
           {session && <SideMenu />}
           {children}
         </Box>

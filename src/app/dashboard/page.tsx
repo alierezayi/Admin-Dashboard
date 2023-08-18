@@ -4,26 +4,21 @@ import scss from "./Dashboard.module.scss";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import { NextPage } from "next";
+import DataRibbon from "@/components/Dashboard/DataRibbon/DataRibbon";
+import TransactionsPerDay from "@/components/Dashboard/TransactionsPerDay/TransactionsPerDay";
+import TransactionBottomRow from "@/components/Dashboard/TransactionBottomRow/TransactionBottomRow";
 
 const DashboardPage: NextPage = () => {
   // const { data: session } = useSession();
 
   return (
     <Box>
-      <Grid container gap={2} className={scss.topCardsContainer}>
-        <Grid>
-          <Paper className={scss.dataCard}>xs=4</Paper>
-        </Grid>
-        <Grid>
-          <Paper className={scss.dataCard}>xs=4</Paper>
-        </Grid>
-        <Grid>
-          <Paper className={scss.dataCard}>xs=4</Paper>
-        </Grid>
+      <Grid container gap={2}>
+        <DataRibbon />
+        <TransactionsPerDay />
       </Grid>
-      <Grid xs={12} marginY={2}>
-        <Paper className={scss.dataCard}>xs=12</Paper>
-      </Grid>
+
+      <TransactionBottomRow />
     </Box>
   );
 };
