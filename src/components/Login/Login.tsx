@@ -1,8 +1,7 @@
 "use client";
 import { useSession, signIn, signOut } from "next-auth/react";
-import Avatar from "@mui/material/Avatar";
-import Container from "@mui/material/Container";
-import { Button, ButtonBase, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { redirect } from "next/navigation";
 
 const Login = () => {
@@ -13,8 +12,8 @@ const Login = () => {
   }
 
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -29,7 +28,7 @@ const Login = () => {
       <Button variant="contained" color="success" onClick={() => signIn()}>
         Sign in
       </Button>
-    </div>
+    </Box>
   );
 };
 
