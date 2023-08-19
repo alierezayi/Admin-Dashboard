@@ -1,3 +1,9 @@
-export default function SettingsPage() {
-  return <h1>Hello, Home page!</h1>;
+import React from 'react'
+
+const Settings = () => {
+  return (
+    <div>Settings</div>
+  )
 }
+
+export default Settings
