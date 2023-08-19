@@ -2,7 +2,7 @@ import Grid from "@mui/material/Grid";
 import React from "react";
 import DataChart from "@/components/DataChart/DataChart";
 import Paper from "@mui/material/Paper";
-import { doughnutChartData } from "@/components/mockData";
+import { doughnutChartData } from "@/helper/mockData";
 import scss from "./TransactionsBottomRow.module.scss";
 
 const TransactionBottomRow = () => {

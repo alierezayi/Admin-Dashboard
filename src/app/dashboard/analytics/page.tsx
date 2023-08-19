@@ -1,3 +1,39 @@
-export default function ProfilePage() {
-  return <h1>Hello, Home page!</h1>;
-}
+"use client";
+import * as React from "react";
+import { DataGrid } from "@mui/x-data-grid";
+import LinearProgress from "@mui/material/LinearProgress";
+import { useDemoData } from "@mui/x-data-grid-generator";
+import { useTheme } from "@mui/material";
+
+const Data = () => {
+  const { data } = useDemoData({
+    dataSet: "Commodity",
+    rowLength: 500,
+    maxColumns: 15,
+  });
+
+  const theme = useTheme();
+
+  return (
+    <>
+      <h1>Data</h1>
+      <p>
+        The bestest of data available here at your finger tips in table form.
+        This could be a whole section of data that is available for users to
+        deep dive further into the numbers/stats.
+      </p>
+      <div style={{ height: "900px", width: "100%" }}>
+        <DataGrid
+          sx={{ background: theme.palette.success.contrastText }}
+          slots={{
+            loadingOverlay: LinearProgress,
+          }}
+          loading={!data}
+          {...data}
+        />
+      </div>
+    </>
+  );
+};
+
+export default Data;

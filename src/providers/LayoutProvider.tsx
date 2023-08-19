@@ -3,6 +3,7 @@ import { useSession } from "next-auth/react";
 import SideMenu from "@/components/SideMenu/SideMenu";
 import Header from "@/components/Header/Header";
 import { Box, Typography } from "@mui/material";
+import Footer from "@/components/Footer/Footer";
 
 const LayoutProvider = (props: any) => {
   const { data: session, status } = useSession();
@@ -12,6 +13,7 @@ const LayoutProvider = (props: any) => {
   return (
     <main>
       <Header />
+
       {status === "loading" ? (
         <Box
           sx={{
@@ -29,6 +31,8 @@ const LayoutProvider = (props: any) => {
           {children}
         </Box>
       )}
+
+      <Footer />
     </main>
   );
 };

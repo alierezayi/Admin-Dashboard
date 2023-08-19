@@ -1,0 +1,41 @@
+[33mcommit 38965533ac232c98f22e2df8e4642566402d35cf[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Ali Rezaei <im1.bitcode@gmail.com>
+Date:   Fri Aug 18 23:11:18 2023 +0330
+
+    add charts and tables with chart js
+
+[33mcommit 3dcb8f83f5a67f3c35df3b5436349b15635067d6[m
+Author: Ali Rezaei <im1.bitcode@gmail.com>
+Date:   Fri Aug 18 20:48:23 2023 +0330
+
+    Route Guarding with NextAuth Middleware
+
+[33mcommit f302adb51f5b8b6698d71d62c539a10bcfaa8de9[m
+Author: Ali Rezaei <im1.bitcode@gmail.com>
+Date:   Fri Aug 18 16:23:19 2023 +0330
+
+    Side Menu
+
+[33mcommit 3599e5a58964b99c3482545f2db2dbdb7989b45f[m
+Author: Ali Rezaei <im1.bitcode@gmail.com>
+Date:   Thu Aug 17 15:16:29 2023 +0330
+
+    add theme with mui
+
+[33mcommit e7edb5d705bf5bdc0382dc9528fbfdddb38d9a49[m
+Author: Ali Rezaei <im1.bitcode@gmail.com>
+Date:   Wed Aug 16 16:08:59 2023 +0330
+
+    authentication with next-auth
+
+[33mcommit 8df6ff7b939570a2612643846bcee4dd1f369006[m
+Author: Ali Rezaei <im1.bitcode@gmail.com>
+Date:   Sun Aug 13 15:46:56 2023 +0330
+
+    setup project
+
+[33mcommit 46a31f9653d7e56ba8a25780ff3df3c8794aadcb[m
+Author: Ali Rezaei <im1.bitcode@gmail.com>
+Date:   Sat Aug 12 15:19:07 2023 +0330
+
+    Initial commit from Create Next App

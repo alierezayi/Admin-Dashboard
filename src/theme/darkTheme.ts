@@ -9,6 +9,12 @@ const darkTheme: ThemeOptions = {
     secondary: {
       main: "#7000ff",
     },
+    error: {
+      main: "#fb7185"
+    },
+    background: {
+      default: "#030712",
+    },
   },
 };
 

@@ -17,7 +17,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import Person2Icon from "@mui/icons-material/Person2";
 import EqualizerIcon from "@mui/icons-material/Equalizer";
-import { Settings } from "@mui/icons-material";
+import { Home, Settings } from "@mui/icons-material";
 import Link from "next/link";
 import scss from "./SideMenu.module.scss";
 import { signOut } from "next-auth/react";
@@ -53,9 +53,16 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   ...theme.mixins.toolbar,
 }));
 
-const menuRouteList = ["analytics", "profile", "settings", ""];
-const menuListTranslations = ["Analytics", "Profile", "Settings", "Sign Out"];
+const menuRouteList = ["", "analytics", "profile", "settings", ""];
+const menuListTranslations = [
+  "Home",
+  "Analytics",
+  "Profile",
+  "Settings",
+  "Sign Out",
+];
 const menuListIcons = [
+  <Home />,
   <EqualizerIcon />,
   <Person2Icon />,
   <Settings />,
