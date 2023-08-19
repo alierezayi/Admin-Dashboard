@@ -16,13 +16,20 @@ const Data = () => {
 
   return (
     <>
-      <h1>Data</h1>
-      <p>
-        The bestest of data available here at your finger tips in table form.
-        This could be a whole section of data that is available for users to
-        deep dive further into the numbers/stats.
-      </p>
-      <div style={{ height: "900px", width: "100%" }}>
+      <div
+        style={{
+          height: "900px",
+          width: "100%",
+          maxWidth: "1600px",
+          margin: "0 auto",
+        }}
+      >
+        <h1>Data</h1>
+        <p>
+          The bestest of data available here at your finger tips in table form.
+          This could be a whole section of data that is available for users to
+          deep dive further into the numbers/stats.
+        </p>
         <DataGrid
           sx={{ background: theme.palette.success.contrastText }}
           slots={{

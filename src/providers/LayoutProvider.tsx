@@ -11,7 +11,13 @@ const LayoutProvider = (props: any) => {
   const { children } = props;
 
   return (
-    <main>
+    <main
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh"
+      }}
+    >
       <Header />
 
       {status === "loading" ? (
@@ -26,13 +32,14 @@ const LayoutProvider = (props: any) => {
           <Typography variant="h4">Loading . . .</Typography>
         </Box>
       ) : (
-        <Box sx={{ padding: session ? "25px 24px 0 80px" : 0 }}>
+        <>
           {session && <SideMenu />}
-          {children}
-        </Box>
+          <Box sx={{ padding: session ? "25px 24px 0 80px" : 0, mb: 10 }}>
+            {children}
+          </Box>
+          <Footer />
+        </>
       )}
-
-      <Footer />
     </main>
   );
 };

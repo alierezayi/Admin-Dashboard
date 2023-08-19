@@ -20,9 +20,10 @@ export const authOptions: NextAuthOptions = {
           placeholder: "your-password",
         },
       },
+
       async authorize(credentials) {
         const user = {
-          id: 1,
+          id: "1",
           name: "admin",
           email: "admin@example.com",
           password: "admin",
@@ -34,9 +35,8 @@ export const authOptions: NextAuthOptions = {
           credentials?.password === user.password
         ) {
           return user;
-        } else {
-          return null;
         }
+        return null;
       },
     }),
 

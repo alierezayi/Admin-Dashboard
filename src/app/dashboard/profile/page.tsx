@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Paper from "@mui/material/Paper";
 import {
@@ -15,7 +15,8 @@ import { useSession } from "next-auth/react";
 
 const Profile = () => {
   const { data: session } = useSession();
-  const names: string[] = session.user.name.split(" ");
+  const getName = session?.user?.name as string;
+  const names: string[] = getName.split(" ");
   const firstName = names[0];
   const lastName = names.length > 1 ? names[names.length - 1] : "";
   const [formData, setFormData] = React.useState({
@@ -40,8 +41,13 @@ const Profile = () => {
   };
   return (
     <>
-      <h1>Profile</h1>
-      <Box>
+      <Box
+        sx={{
+          maxWidth: "1600px",
+          margin: "0 auto",
+        }}
+      >
+        <h1>Profile</h1>
         <Typography variant={"h4"} sx={{ paddingBottom: 4 }}>
           Hey {session ? session?.user?.name : "User"}, welcome to your profile
           👋

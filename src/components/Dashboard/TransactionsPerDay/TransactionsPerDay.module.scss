@@ -2,6 +2,8 @@ $breakPoint: 1000px;
 
 .wrapper {
   display: flex;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .transactions {

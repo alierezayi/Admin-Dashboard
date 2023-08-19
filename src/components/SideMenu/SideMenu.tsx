@@ -14,13 +14,14 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import Person2Icon from "@mui/icons-material/Person2";
-import EqualizerIcon from "@mui/icons-material/Equalizer";
-import { Home, Settings } from "@mui/icons-material";
 import Link from "next/link";
 import scss from "./SideMenu.module.scss";
 import { signOut } from "next-auth/react";
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import EqualizerRoundedIcon from "@mui/icons-material/EqualizerRounded";
+import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
+import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
+import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 
 const drawerWidth = 240;
 
@@ -62,11 +63,11 @@ const menuListTranslations = [
   "Sign Out",
 ];
 const menuListIcons = [
-  <Home />,
-  <EqualizerIcon />,
-  <Person2Icon />,
-  <Settings />,
-  <ExitToAppIcon />,
+  <HomeRoundedIcon />,
+  <EqualizerRoundedIcon />,
+  <PersonRoundedIcon />,
+  <SettingsRoundedIcon />,
+  <LogoutRoundedIcon />,
 ];
 
 const SideMenu = () => {
