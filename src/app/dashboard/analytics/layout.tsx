@@ -3,5 +3,5 @@ export default function AnalyticsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <section>{children}</section>;
+  return <section style={{marginBottom: "100px"}}>{children}</section>;
 }
